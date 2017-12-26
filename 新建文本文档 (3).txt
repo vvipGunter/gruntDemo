@@ -1,0 +1,57 @@
+        usemin: {
+
+            html: 'layout.tpl.php',
+
+            options: {
+
+                blockReplacements: {
+
+                    css: function (block) {
+
+                        var real_path = 'dist/www/' + block.dest;
+
+                        var rev_code = hash(real_path);
+
+                        var tmp = block.dest.split('/');
+
+                        tmp[tmp.length-1] = rev_code + '.' + tmp[tmp.length-1];
+
+                        var final_name = tmp.join('/');
+
+                        final_name =  sitePath + final_name;
+
+                        var media = block.media ? ' media="' + block.media + '"' : '';
+
+                        return '<link rel="stylesheet" href="' + final_name + '"' + media + '>';//此处为css标签的定制
+
+                    },
+
+                    js: function (block) {
+
+                        var real_path = 'dist/www/' + block.dest;
+
+                        var rev_code = hash(real_path);
+
+                        var tmp = block.dest.split('/');
+
+                        tmp[tmp.length-1] = rev_code + '.' + tmp[tmp.length-1];
+
+                        var final_name = tmp.join('/');
+
+                        final_name =  sitePath + final_name;
+
+                        var defer = block.defer ? 'defer ' : '';
+
+                        var async = block.async ? 'async ' : '';
+
+                        return '<script ' + defer + async + 'src="' + final_name + '"><\/script>';//次处为js标签的定制
+
+                    }
+
+                }
+
+            }
+
+        },
+
+

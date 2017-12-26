@@ -1,0 +1,125 @@
+module.exports = function(grunt) {
+
+
+    require('load-grunt-tasks')(grunt);
+
+    var sitepath = '/cp/';
+
+
+    grunt.config.init({
+
+      rev: {
+
+            options: {
+
+            algorithm: 'md5',
+
+            length: 8
+
+            },  
+
+            assets: {
+
+                files: [{
+
+                    src: [
+
+                        'dist/assets/**/*.{css,jpg,jpeg,gif,png,js}'
+
+                    ]   
+
+                }]  
+
+            }   
+
+      },
+
+      useminPrepare: {
+
+          html: 'dist/index.html'
+
+      },
+
+      usemin: {
+
+          html: 'dist/index.html',
+
+          options: {
+
+                blockReplacements: {
+
+                    css: function (block) {
+
+                        return '<link rel="stylesheet" href="' + sitepath + block.dest + '">';
+
+                    }
+
+                    }
+
+         }
+
+      },
+
+      copy: {
+
+          html: {
+
+              src: './index.html', dest: 'dist/index.html'
+
+        }
+
+      },
+
+      uglify: {
+
+           stash: {
+
+               options: {
+
+                   report: 'gzip'
+
+               }
+
+           }
+
+      },
+
+      cssmin: {
+
+           stash: {
+
+               options: {
+
+                   report: 'gzip'              
+
+               }
+
+           }
+
+
+      }
+
+
+    });
+
+
+    grunt.registerTask('default',[
+
+        'copy:html',
+
+        'useminPrepare',
+
+        'concat',
+
+        'uglify',
+
+        'cssmin',
+
+         'rev',
+
+        'usemin'
+
+    ]);
+
+}
+

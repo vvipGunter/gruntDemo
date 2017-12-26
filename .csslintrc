@@ -1,0 +1,63 @@
+{
+    
+    //具体规则设置参见:https://github.com/CSSLint/csslint/wiki/Rules 
+
+         //Parsing errors should be fixed
+         //...注意:输入失误引起的错误提示必须修复
+
+          //Possible Errors 可能的错误
+	  //The following rules point out potential errors in your CSS.
+          "box-model":true,	//Beware of box model size 
+	  "display-property-grouping":false,	//Require properties appropriate for display 
+          "duplicate-properties":true,	// Disallow duplicate properties 
+          "empty-rules":true, 	//Disallow empty rules 
+          "known-properties":true, 	//Require use of known properties 
+
+
+          
+           //Compatibility 兼容性 
+           //The following rules flag for compatibility problems across browsers and browser settings.
+           "adjoining-classes":true,	//Disallow adjoining classes 
+	   "box-sizing":true,	//Disallow box-sizing 
+	   "compatible-vendor-prefixes":true,	//Require compatible vendor prefixes 
+	   "gradients":true,	//Require all gradient definitions 
+	   "text-indent":true,	//Disallow negative text-indent 
+	   "vendor-prefix":true,	//Require standard property with vendor prefix 
+	   "fallback-colors":true,	//Require fallback colors 
+	   "star-property-hack":true,	//Disallow star hack 
+	   "underscore-property-hack":true,	//Disallow underscore hack 
+	   "bulletproof-font-face":true,	//Bulletproof font-face (new in v0.9.10)
+
+           //Performance
+           //The following rules are aimed at improving CSS performance, including runtime performance and overall code size.
+           "font-faces":true,	//Don't use too many web fonts 
+	"import":true, 		//Disallow @import 
+	"regex-selectors":true,		//Disallow selectors that look like regular expressions 
+	"universal-selector":true,	//Disallow universal selector 
+	"unqualified-attributes":true,	//Disallow unqualified attribute selectors 
+	"zero-units":true,	//Disallow units for zero values 
+	"overqualified-elements":true,	//Disallow overqualified elements 
+	"shorthand":true,	//Require shorthand properties 
+	"duplicate-background-images":true,	//Disallow duplicate background images 
+
+      
+        //Maintainability & Duplication 
+        //These rules help to ensure your code is readable and maintainable by others.
+        "floats":true,	//Disallow too many floats 
+	"font-sizes":true,	//Don't use too many font-size declarations 
+	"ids":true, 	//Disallow IDs in selectors 
+	"important":true,	 //Disallow !important 
+         
+         //Accessibility
+         //These rules are designed to pick out possible accessibility issues.
+          "outline-none":true,	//Disallow outline:none 
+          
+	 //OOCSS 
+         //These rules are based on the principles of OOCSS.
+         "qualified-headings":true,	//Disallow qualified headings 
+	 "unique-headings":true  	//Headings should only be defined once 
+
+
+
+
+}

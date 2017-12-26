@@ -1,0 +1,43 @@
+{
+  "name": "aiwuliu",
+  "title": "aiwuliu_title",
+  "description": "aiwuliu_description",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "main": "Gruntfile.js",
+  "homepage": "http://www.256360.com/",
+  "scripts": {
+    "test": "grunt qunit"
+  },
+  "keywords": [
+    "some_keywords"
+  ],
+  "author": {
+    "name": "aiwuliu_team_members",
+    "url": "http://www.256360.com/"
+  },
+  "repository": {
+    "type": "svn",
+    "url": ""
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-compress": "^1.1.1",
+    "grunt-contrib-concat": "^1.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-csslint": "^1.0.0",
+    "grunt-contrib-cssmin": "^1.0.1",
+    "grunt-contrib-htmlmin": "^1.1.0",
+    "grunt-contrib-imagemin": "^1.0.0",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-rev": "^0.1.0",
+    "grunt-usemin": "^3.1.1"
+  },
+  "dependencies": {}
+}
